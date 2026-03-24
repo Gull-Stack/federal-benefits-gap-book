@@ -814,14 +814,37 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== MID-SECTION CTA ========== */
 .mid-cta {
-  padding: 1.5rem 0;
-  background: var(--off-white);
+  padding: 0;
+  background: linear-gradient(135deg, var(--patriot-red), var(--patriot-red-dark));
   text-align: center;
 }
 
 .mid-cta-content {
   display: flex;
   justify-content: center;
+}
+
+.mid-cta .btn {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mid-cta .btn:hover {
+  background: rgba(255,255,255,0.1);
+  transform: none;
+  box-shadow: none;
+}
+
+.mid-cta .container {
+  max-width: 100%;
+  padding: 0;
 }
 
 /* ========== FREE CHAPTER CTA — Glass on Dark ========== */
