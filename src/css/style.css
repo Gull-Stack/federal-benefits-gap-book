@@ -1105,10 +1105,6 @@ noscript .counter {
   margin: 4rem 0;
 }
 
-.hero-image {
-  order: -1;
-}
-
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .nav-links { 
