@@ -374,17 +374,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .book-mockup-img {
-  max-width: 100%;
+  max-width: 120%;
+  width: 120%;
   height: auto;
-  max-height: 560px;
+  max-height: 700px;
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
-  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.4));
-  mix-blend-mode: multiply;
-  transform: rotate(-3deg);
+  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.5));
+  transform: rotate(-2deg) scale(1.05);
 }
 
 .book-mockup-img:hover {
-  transform: scale(1.02) translateY(-4px) rotate(-3deg);
+  transform: scale(1.08) translateY(-6px) rotate(-2deg);
 }
 
 /* ========== MEDIA BAR (REPLACING RETAILER) ========== */
@@ -1159,6 +1159,7 @@ noscript .counter {
   }
 
   .hero-text { max-width: 100%; }
+  .book-mockup-img { max-width: 100%; width: 100%; max-height: 500px; transform: rotate(-2deg); }
   .hero-title { font-size: 2.5rem; }
   .section-title { font-size: 2rem; }
   .cards-grid { grid-template-columns: 1fr; }
