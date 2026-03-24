@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Navy blue background circle -->
+  <circle cx="256" cy="256" r="256" fill="#0B1D3A"/>
+  <!-- Large mountain (white) -->
+  <path d="M256 120 L100 400 L412 400 Z" fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linejoin="round"/>
+  <!-- Small mountain (red) -->
+  <path d="M320 200 L230 400 L410 400 Z" fill="none" stroke="#C41E3A" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Peak accent (white) -->
+  <path d="M256 100 L236 140 L256 120 L276 140 Z" fill="#FFFFFF"/>
+</svg>
