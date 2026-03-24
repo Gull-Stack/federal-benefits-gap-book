@@ -164,17 +164,17 @@ h1,h2,h3,h4,h5,h6 {
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  background: rgba(11,29,58,0.7);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(20px) saturate(1.4);
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(11,29,58,0.06);
   z-index: 1000;
   transition: all 0.4s ease;
 }
 
 .nav.scrolled {
-  background: rgba(11,29,58,0.92);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 4px 24px rgba(11,29,58,0.08);
 }
 
 .nav-container {
@@ -196,7 +196,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .nav-links a {
-  color: rgba(255,255,255,0.85);
+  color: var(--navy);
   text-decoration: none;
   font-family: var(--font-family);
   font-weight: 500;
@@ -205,7 +205,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .nav-links a:hover {
-  color: var(--white);
+  color: var(--patriot-red);
 }
 
 .nav-links .btn {
@@ -227,42 +227,28 @@ h1,h2,h3,h4,h5,h6 {
 .nav-toggle span {
   width: 24px;
   height: 2.5px;
-  background: var(--white);
+  background: var(--navy);
   margin: 3px 0;
   border-radius: 2px;
   transition: 0.3s;
 }
 
-/* ========== HERO ========== */
+/* ========== HERO — White ========== */
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 45%, var(--navy-light) 100%);
-  color: var(--white);
+  background: var(--white);
+  color: var(--text-dark);
   padding: 140px 0 100px;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle star pattern overlay */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.03) 1px, transparent 1px),
-    radial-gradient(circle at 85% 15%, rgba(255,255,255,0.02) 1px, transparent 1px),
-    radial-gradient(circle at 45% 75%, rgba(255,255,255,0.02) 1px, transparent 1px),
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 100px 100px, 150px 150px, 120px 120px, 80px 80px;
-  pointer-events: none;
-}
-
-/* Red accent stripe */
+/* Subtle accent stripe at bottom */
 .hero::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--patriot-red), var(--patriot-red-dark), var(--patriot-red));
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--patriot-red), var(--navy));
 }
 
 .hero-content {
@@ -278,9 +264,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .coming-soon-badge {
   display: inline-block;
-  background: rgba(196,30,58,0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(196,30,58,0.3);
+  background: var(--navy);
   color: var(--white);
   padding: 8px 20px;
   border-radius: var(--radius-pill);
@@ -299,14 +283,14 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
   line-height: 1.08;
   margin-bottom: 1rem;
-  color: var(--white);
+  color: var(--navy);
 }
 
 .hero-subtitle {
   font-family: var(--font-family);
   font-size: 1.35rem;
   font-weight: 300;
-  color: var(--star-gold);
+  color: var(--patriot-red);
   margin-bottom: 1.5rem;
   letter-spacing: 0.2px;
 }
@@ -317,7 +301,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
   margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: rgba(255,255,255,0.9);
+  color: var(--text-dark);
 }
 
 .hero-description {
@@ -325,7 +309,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 2rem;
-  color: rgba(255,255,255,0.75);
+  color: var(--text-mid);
 }
 
 .hero-image {
@@ -339,7 +323,7 @@ h1,h2,h3,h4,h5,h6 {
   max-height: 520px;
   height: auto;
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.05);
+  box-shadow: 0 20px 60px rgba(11,29,58,0.2), 0 0 0 1px rgba(11,29,58,0.08);
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 
