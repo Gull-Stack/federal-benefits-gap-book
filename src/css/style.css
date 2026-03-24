@@ -371,10 +371,11 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== MEDIA BAR (REPLACING RETAILER) ========== */
 .media-bar {
-  background: var(--navy);
-  color: rgba(255,255,255,0.7);
+  background: var(--off-white);
+  color: var(--text-mid);
   padding: 24px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(11,29,58,0.08);
+  border-top: 1px solid rgba(11,29,58,0.08);
   position: relative;
   overflow: hidden;
 }
@@ -398,7 +399,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--star-gold);
+  color: var(--navy);
   white-space: nowrap;
 }
 
@@ -409,10 +410,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .media-logo {
-  height: 32px;
+  height: 36px;
   width: auto;
-  opacity: 0.5;
-  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.6;
+  filter: grayscale(100%) brightness(0.4);
   transition: all 0.3s ease;
 }
 .media-logo:hover { 
