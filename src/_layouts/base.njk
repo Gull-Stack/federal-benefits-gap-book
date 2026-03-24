@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "The Federal Benefits Gap - The Definitive Guide to Your Federal Employee Retirement" }}</title>
+    <meta name="description" content="{{ description or "Your Federal Benefits Are More Valuable Than You Think. Most Federal Employees Leave Thousands on the Table. Get your free chapter of The Federal Benefits Gap by Michael Stevens." }}">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav id="nav" class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-title">The Federal Benefits Gap</span>
+            </div>
+            <div class="nav-links">
+                <a href="#what-youll-learn">What You'll Learn</a>
+                <a href="#about-mike">About Mike</a>
+                <a href="#free-chapter" class="btn btn-secondary">Get Free Chapter</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Capital Wealth Media, LLC. All rights reserved.</p>
+                <p class="disclaimer">Advisory services offered through Capital Wealth, LLC, a State of Utah Registered Investment Advisor. Insurance services offered through CWA Insurance Services, LLC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "federal-benefits-gap-book",
+  "version": "1.0.0",
+  "description": "Landing page for The Federal Benefits Gap book by Michael Stevens",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": ["federal-benefits", "retirement", "book", "landing-page"],
+  "author": "Michael Stevens",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
