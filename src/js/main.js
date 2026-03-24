@@ -24,8 +24,10 @@ function initScrollAnimations() {
     });
   }, observerOptions);
 
-  // Observe all fade-in elements
+  // Observe all fade-in elements - set initial opacity via JS so content shows without JS
   document.querySelectorAll('.fade-in').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
     observer.observe(el);
   });
 }
@@ -63,7 +65,7 @@ function initSmoothScrolling() {
       
       if (target) {
         const headerOffset = 80;
-        const elementPosition = target.getBoundingClientPosition().top;
+        const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
