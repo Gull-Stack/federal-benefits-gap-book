@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Scroll animations using Intersection Observer
 function initScrollAnimations() {
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px 50px 0px'
   };
 
   const observer = new IntersectionObserver(function(entries) {
@@ -24,12 +24,20 @@ function initScrollAnimations() {
     });
   }, observerOptions);
 
-  // Observe all fade-in elements - set initial opacity via JS so content shows without JS
-  document.querySelectorAll('.fade-in').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
+  // Observe all fade-in elements
+  const fadeEls = document.querySelectorAll('.fade-in');
+  fadeEls.forEach(el => {
     observer.observe(el);
   });
+
+  // Safety net: if elements still hidden after 3s, force show them
+  setTimeout(function() {
+    fadeEls.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible');
+      }
+    });
+  }, 3000);
 }
 
 // Navigation scroll effect
