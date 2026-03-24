@@ -22,15 +22,22 @@ layout: "base.njk"
     </div>
 </section>
 
-<section class="retailer-bar">
+<section class="media-bar">
     <div class="container">
-        <div class="retailer-content">
-            <span class="retailer-label">Available at</span>
-            <div class="retailer-logos">
-                <span class="retailer-name">Amazon</span>
-                <span class="retailer-name">Walmart</span>
-                <span class="retailer-name">Barnes & Noble</span>
-                <span class="retailer-name">Target</span>
+        <div class="media-content">
+            <span class="media-label">As Seen On</span>
+            <div class="media-logos">
+                <img src="/assets/images/media/ksl.png" alt="KSL" class="media-logo">
+                <img src="/assets/images/media/fortune.png" alt="Fortune" class="media-logo">
+                <img src="/assets/images/media/knrs-2.png" alt="KNRS" class="media-logo">
+                <img src="/assets/images/media/newstalk.png" alt="NewsTalk" class="media-logo">
+            </div>
+            <!-- Duplicate for seamless scroll -->
+            <div class="media-logos">
+                <img src="/assets/images/media/ksl.png" alt="KSL" class="media-logo">
+                <img src="/assets/images/media/fortune.png" alt="Fortune" class="media-logo">
+                <img src="/assets/images/media/knrs-2.png" alt="KNRS" class="media-logo">
+                <img src="/assets/images/media/newstalk.png" alt="NewsTalk" class="media-logo">
             </div>
         </div>
     </div>
@@ -40,7 +47,7 @@ layout: "base.njk"
     <div class="container">
         <h2 class="section-title">What You'll Learn</h2>
         <div class="cards-grid">
-            <div class="card fade-in">
+            <div class="card fade-in" style="--delay: 0.1s">
                 <div class="card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z"/>
@@ -51,7 +58,7 @@ layout: "base.njk"
                 <p>How your Federal Employees Retirement System pension works and strategies to maximize your lifetime benefit</p>
             </div>
             
-            <div class="card fade-in">
+            <div class="card fade-in" style="--delay: 0.2s">
                 <div class="card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
@@ -62,7 +69,7 @@ layout: "base.njk"
                 <p>Advanced Thrift Savings Plan strategies including fund allocation, Roth conversions, and withdrawal planning</p>
             </div>
             
-            <div class="card fade-in">
+            <div class="card fade-in" style="--delay: 0.3s">
                 <div class="card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"/>
@@ -75,7 +82,7 @@ layout: "base.njk"
                 <p>When to keep your Federal Employees Group Life Insurance and when to replace it — could save you thousands</p>
             </div>
             
-            <div class="card fade-in">
+            <div class="card fade-in" style="--delay: 0.4s">
                 <div class="card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
@@ -85,7 +92,7 @@ layout: "base.njk"
                 <p>How to optimize your Federal Employees Health Benefits in retirement, including Medicare coordination</p>
             </div>
             
-            <div class="card fade-in">
+            <div class="card fade-in" style="--delay: 0.5s">
                 <div class="card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -96,7 +103,7 @@ layout: "base.njk"
                 <p>How Social Security coordinates with your FERS pension and the strategies most advisors miss</p>
             </div>
             
-            <div class="card fade-in">
+            <div class="card fade-in" style="--delay: 0.6s">
                 <div class="card-icon">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
@@ -112,41 +119,58 @@ layout: "base.njk"
     </div>
 </section>
 
+<!-- Star Divider -->
+<div class="star-divider">
+    <span class="star">★</span>
+</div>
+
+<!-- Image Break Section -->
+<section class="image-break">
+    <div class="image-break-content fade-in">
+        <p class="image-break-quote">"Your benefits are valuable. But only if you know how to use them."</p>
+    </div>
+</section>
+
+<!-- Star Divider -->
+<div class="star-divider">
+    <span class="star">★</span>
+</div>
+
 <section class="book-for-you">
     <div class="container">
         <h2 class="section-title">This Book Is For You If...</h2>
         <div class="checklist fade-in">
-            <div class="checklist-item">
+            <div class="checklist-item" style="--delay: 0.1s">
                 <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20,6 9,17 4,12"/>
                 </svg>
                 <span>You're a federal employee within 10 years of retirement</span>
             </div>
-            <div class="checklist-item">
+            <div class="checklist-item" style="--delay: 0.2s">
                 <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20,6 9,17 4,12"/>
                 </svg>
                 <span>You're confused about how FERS, TSP, FEGLI, and FEHB work together</span>
             </div>
-            <div class="checklist-item">
+            <div class="checklist-item" style="--delay: 0.3s">
                 <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20,6 9,17 4,12"/>
                 </svg>
                 <span>You want to understand the real value of your federal benefits package</span>
             </div>
-            <div class="checklist-item">
+            <div class="checklist-item" style="--delay: 0.4s">
                 <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20,6 9,17 4,12"/>
                 </svg>
                 <span>You're worried about making irreversible decisions at retirement</span>
             </div>
-            <div class="checklist-item">
+            <div class="checklist-item" style="--delay: 0.5s">
                 <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20,6 9,17 4,12"/>
                 </svg>
                 <span>You want clarity on your Thrift Savings Plan options</span>
             </div>
-            <div class="checklist-item">
+            <div class="checklist-item" style="--delay: 0.6s">
                 <svg class="check-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20,6 9,17 4,12"/>
                 </svg>
@@ -156,16 +180,74 @@ layout: "base.njk"
     </div>
 </section>
 
+<!-- Star Divider -->
+<div class="star-divider">
+    <span class="star">★</span>
+</div>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Federal Employees Are Saying</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in" style="--delay: 0.1s">
+                <div class="testimonial-stars">
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                </div>
+                <p class="testimonial-text">"This book changed how I think about my retirement."</p>
+                <p class="testimonial-author">— Federal Employee, 25 years</p>
+            </div>
+            
+            <div class="testimonial-card fade-in" style="--delay: 0.2s">
+                <div class="testimonial-stars">
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                </div>
+                <p class="testimonial-text">"I had no idea I was leaving money on the table until I read this."</p>
+                <p class="testimonial-author">— GS-13, DOD</p>
+            </div>
+            
+            <div class="testimonial-card fade-in" style="--delay: 0.3s">
+                <div class="testimonial-stars">
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                    <span class="testimonial-star">★</span>
+                </div>
+                <p class="testimonial-text">"Every federal employee should read this before they retire."</p>
+                <p class="testimonial-author">— Retired, VA</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Star Divider -->
+<div class="star-divider">
+    <span class="star">★</span>
+</div>
+
 <section id="about-mike" class="about-author">
     <div class="container">
         <div class="author-content">
             <div class="author-text fade-in">
                 <h2>About the Author</h2>
                 <h3>Michael Stevens</h3>
+                <div class="author-badges">
+                    <span class="author-badge">Host of Retire Right Radio</span>
+                    <span class="author-badge">Founder, Capital Wealth</span>
+                </div>
                 <p>Michael Stevens is a fiduciary financial advisor and the founder of Capital Wealth. He's the host of the weekly radio show Retire Right Radio, a guest speaker on local news networks, and a trusted voice for individuals and families navigating retirement across the country. He's passionate about helping federal employees understand and maximize their benefits.</p>
                 <div class="author-stats">
                     <div class="stat">
-                        <span class="stat-number">1,000+</span>
+                        <span class="stat-number counter" data-target="1000">0</span><span class="stat-number">+</span>
                         <span class="stat-label">Families Served</span>
                     </div>
                     <div class="stat">
@@ -180,11 +262,16 @@ layout: "base.njk"
                 </a>
             </div>
             <div class="author-image fade-in">
-                <img src="/assets/images/mike-stevens.jpg" alt="Michael Stevens - Capital Wealth" style="width: 340px; height: 340px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 32px rgba(25, 79, 144, 0.2);">
+                <img src="/assets/images/mike-stevens.jpg" alt="Michael Stevens - Capital Wealth" style="width: 340px; height: 340px; border-radius: 50%; object-fit: cover;">
             </div>
         </div>
     </div>
 </section>
+
+<!-- Star Divider -->
+<div class="star-divider">
+    <span class="star">★</span>
+</div>
 
 <section id="free-chapter" class="free-chapter-cta">
     <div class="container">
@@ -206,35 +293,35 @@ layout: "base.njk"
     <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq-list">
-            <details class="faq-item fade-in">
+            <details class="faq-item fade-in" style="--delay: 0.1s">
                 <summary>What will I learn from The Federal Benefits Gap?</summary>
                 <div class="faq-answer">
                     <p>You'll discover comprehensive strategies for maximizing your FERS pension, optimizing your TSP investments, making informed decisions about FEGLI life insurance, planning your FEHB health benefits for retirement, and understanding how Social Security integrates with your federal benefits. Most importantly, you'll learn about the critical gaps between what HR tells you and what you actually need to know for a secure retirement.</p>
                 </div>
             </details>
             
-            <details class="faq-item fade-in">
+            <details class="faq-item fade-in" style="--delay: 0.2s">
                 <summary>Who is The Federal Benefits Gap for?</summary>
                 <div class="faq-answer">
                     <p>This book is specifically written for federal employees, especially those within 10 years of retirement. Whether you're a GS employee, postal worker, or other federal worker, if you're confused about how your benefits work together or worried about making the right decisions at retirement, this book is for you.</p>
                 </div>
             </details>
             
-            <details class="faq-item fade-in">
+            <details class="faq-item fade-in" style="--delay: 0.3s">
                 <summary>Who is Michael Stevens?</summary>
                 <div class="faq-answer">
                     <p>Michael Stevens is a fiduciary financial advisor and the founder of Capital Wealth. He hosts the weekly radio show Retire Right Radio and is a guest speaker on local news networks. As a trusted voice for individuals and families navigating retirement, he's passionate about helping federal employees understand and maximize their benefits. He's served over 1,000 families as a fiduciary advisor.</p>
                 </div>
             </details>
             
-            <details class="faq-item fade-in">
+            <details class="faq-item fade-in" style="--delay: 0.4s">
                 <summary>When will The Federal Benefits Gap be available?</summary>
                 <div class="faq-answer">
                     <p>The Federal Benefits Gap is scheduled for release in 2026. Get your free chapter now and be the first to know when the full book becomes available at major retailers.</p>
                 </div>
             </details>
             
-            <details class="faq-item fade-in">
+            <details class="faq-item fade-in" style="--delay: 0.5s">
                 <summary>Is this book only for high-earning federal employees?</summary>
                 <div class="faq-answer">
                     <p>No! The strategies and insights in The Federal Benefits Gap apply to federal employees at all GS levels and pay grades. Whether you're early in your federal career or approaching retirement, understanding how to maximize your benefits package is crucial regardless of your current salary.</p>
