@@ -205,35 +205,10 @@ function initFormHandling() {
   }
 }
 
-// Parallax effects for image break section
+// Parallax effects — CSS-only via background-attachment: fixed
 function initParallaxEffects() {
-  const imageBreak = document.querySelector('.image-break');
-  if (!imageBreak) return;
-  
-  let ticking = false;
-  
-  function updateParallax() {
-    const scrolled = window.pageYOffset;
-    const imageBreakTop = imageBreak.getBoundingClientRect().top + window.pageYOffset;
-    const rate = scrolled * -0.5;
-    
-    // Only apply parallax when the element is in view
-    if (scrolled + window.innerHeight > imageBreakTop && scrolled < imageBreakTop + imageBreak.offsetHeight) {
-      imageBreak.style.transform = `translate3d(0, ${rate}px, 0)`;
-    }
-    
-    ticking = false;
-  }
-  
-  // Only enable parallax on larger screens
-  if (window.innerWidth > 768) {
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    });
-  }
+  // JS transform removed — was causing floating/overlay issues
+  // background-attachment: fixed in CSS handles the parallax effect cleanly
 }
 
 // Animated number counters
