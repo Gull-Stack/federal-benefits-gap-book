@@ -441,6 +441,19 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--navy);
 }
 
+.section-title--gold {
+  color: var(--star-gold) !important;
+}
+
+.more-emphasis {
+  font-family: var(--font-display);
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--star-gold);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
