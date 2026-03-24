@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initFormHandling();
   initParallaxEffects();
   initNumberCounters();
+  initScrollProgressBar();
 });
 
 // Enhanced scroll animations with staggered timing
@@ -118,9 +119,17 @@ function initFormHandling() {
     emailForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
+      const firstNameInput = this.querySelector('input[name="firstName"]');
       const emailInput = this.querySelector('input[type="email"]');
       const submitButton = this.querySelector('button[type="submit"]');
+      const firstName = firstNameInput.value.trim();
       const email = emailInput.value.trim();
+      
+      if (!firstName) {
+        showFormMessage('Please enter your first name.', 'error');
+        firstNameInput.focus();
+        return;
+      }
       
       if (!email) {
         showFormMessage('Please enter your email address.', 'error');
@@ -154,6 +163,7 @@ function initFormHandling() {
       
       setTimeout(() => {
         showFormMessage('Thank you! You\'ll receive your free chapter soon.', 'success');
+        firstNameInput.value = '';
         emailInput.value = '';
         submitButton.innerHTML = originalText;
         submitButton.disabled = false;
@@ -230,6 +240,12 @@ function initParallaxEffects() {
 function initNumberCounters() {
   const counters = document.querySelectorAll('.counter');
   if (counters.length === 0) return;
+  
+  // Set fallback values immediately to prevent showing 0
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    counter.textContent = target.toLocaleString();
+  });
   
   const observerOptions = {
     threshold: 0.5,
@@ -313,9 +329,9 @@ function showFormMessage(message, type) {
     }
   `;
   
-  // Insert after form group
-  const formGroup = document.querySelector('.form-group');
-  formGroup.parentNode.insertBefore(messageEl, formGroup.nextSibling);
+  // Insert after form fields
+  const formFields = document.querySelector('.form-fields');
+  formFields.parentNode.insertBefore(messageEl, formFields.nextSibling);
   
   // Animate in
   requestAnimationFrame(() => {
@@ -455,6 +471,30 @@ const debouncedScroll = debounce(function() {
 }, 16); // ~60fps
 
 window.addEventListener('scroll', debouncedScroll);
+
+// Scroll progress bar
+function initScrollProgressBar() {
+  const progressBar = document.getElementById('scroll-progress');
+  if (!progressBar) return;
+  
+  let ticking = false;
+  
+  function updateProgressBar() {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    progressBar.style.width = Math.min(scrollPercent, 100) + '%';
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(updateProgressBar);
+      ticking = true;
+    }
+  });
+}
 
 // Handle reduced motion preferences
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
