@@ -234,6 +234,14 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--white);
   padding: 10px 22px;
   font-size: 0.85rem;
+  border: none;
+}
+
+.nav-links .btn:hover {
+  background: linear-gradient(135deg, var(--patriot-red-dark), var(--patriot-red));
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(196,30,58,0.3);
 }
 
 .nav-toggle {
