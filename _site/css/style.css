@@ -124,12 +124,11 @@ h1,h2,h3,h4,h5,h6 {
 .btn-primary {
   background: linear-gradient(135deg, var(--patriot-red), var(--patriot-red-dark));
   color: var(--white);
-  box-shadow: 0 4px 16px rgba(196,30,58,0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(196,30,58,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .btn-secondary {
@@ -318,6 +317,44 @@ h1,h2,h3,h4,h5,h6 {
   align-items: center;
 }
 
+/* Tablet mockup frame */
+.tablet-mockup {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 
+    0 24px 60px rgba(11,29,58,0.18),
+    0 0 0 1px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  max-width: 420px;
+}
+
+.tablet-mockup::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.tablet-mockup:hover {
+  transform: translateY(-8px);
+}
+
+.tablet-mockup .book-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Fallback for flat cover */
 .book-cover {
   max-width: 100%;
   max-height: 520px;
