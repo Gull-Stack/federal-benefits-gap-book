@@ -1,28 +1,28 @@
-/* Capital Wealth Design System */
+/* Capital Wealth Design System - Exact Brand Colors */
 :root {
-  /* Colors */
-  --primary: #003870;
+  /* Exact CW Brand Colors */
+  --primary: #194F90; /* PANTONE 7686 C */
   --primary-container: #194f90;
-  --secondary: #F09F54;
+  --secondary: #F09F54; /* Accent Orange */
   --navy: #194F90;
-  --surface: #f8f9fb;
+  --surface: #f0f1f3; /* Light Grey */
   --on-surface: #191c1e;
   --on-surface-variant: #424750;
   --outline-variant: #c2c6d2;
-  --accent-primary: #2b7bb9;
+  --accent-primary: #194F90;
   --accent-secondary: #f09f54;
-  --brand-grey: #7b868C;
+  --brand-grey: #7b868C; /* PANTONE 430 C */
   
   /* Legacy color mappings for compatibility */
-  --navy-primary: #003870;
+  --navy-primary: #194F90;
   --navy-secondary: #194f90;
   --gold-accent: #F09F54;
   --gold-light: #f5a968;
-  --white: #ffffff;
-  --light-gray: #f8f9fb;
+  --white: #FFFFFF;
+  --light-gray: #f0f1f3;
   --medium-gray: #7b868C;
   --dark-gray: #191c1e;
-  --text-primary: #003870;
+  --text-primary: #194F90;
   --text-secondary: #424750;
   
   /* Fonts */
@@ -171,12 +171,28 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
 }
 
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
 .nav-title {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--primary);
+  margin-bottom: -2px;
+}
+
+.nav-subtitle {
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--brand-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
