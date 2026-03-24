@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 400;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   color: var(--navy);
   line-height: 1.1;
 }
@@ -258,7 +258,7 @@ h1,h2,h3,h4,h5,h6 {
 .hero {
   background: var(--white);
   color: var(--text-dark);
-  padding: 140px 0 100px;
+  padding: 120px 0 60px;
   position: relative;
   overflow: hidden;
 }
@@ -423,7 +423,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== WHAT YOU'LL LEARN — Background Image + Liquid Glass Cards ========== */
 .what-youll-learn {
-  padding: 120px 0;
+  padding: 64px 0;
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 40%, var(--navy-mid) 100%);
   position: relative;
 }
@@ -541,7 +541,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== IMAGE BREAK — CAPITOL PARALLAX ========== */
 .image-break {
-  min-height: 60vh;
+  min-height: 40vh;
   background: linear-gradient(rgba(11,29,58,0.8), rgba(11,29,58,0.6)),
               url('/assets/images/capitol-break.jpg') center/cover;
   background-attachment: fixed;
@@ -579,7 +579,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== BOOK FOR YOU — NAVY WITH STARS AND GLASS CARDS ========== */
 .book-for-you {
-  padding: 120px 0;
+  padding: 64px 0;
   background: linear-gradient(135deg, var(--navy), var(--navy-mid));
   color: var(--white);
   position: relative;
@@ -646,7 +646,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== TESTIMONIAL SECTION — GLASS MORPHISM ========== */
 .testimonials {
-  padding: 120px 0;
+  padding: 64px 0;
   background: var(--white);
 }
 
@@ -702,7 +702,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== AUTHOR SECTION — ENHANCED PRESENCE ========== */
 .about-author {
-  padding: 120px 0;
+  padding: 64px 0;
   background: linear-gradient(135deg, #f8fafc 0%, var(--off-white) 100%);
   position: relative;
 }
@@ -826,7 +826,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== MID-SECTION CTA ========== */
 .mid-cta {
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   background: var(--off-white);
   text-align: center;
 }
@@ -840,7 +840,7 @@ h1,h2,h3,h4,h5,h6 {
 .free-chapter-cta {
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, var(--navy-light) 100%);
   color: var(--white);
-  padding: 120px 0;
+  padding: 64px 0;
   position: relative;
 }
 
@@ -947,7 +947,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== FAQ — ENHANCED ACCORDION ========== */
 .faq {
-  padding: 120px 0;
+  padding: 64px 0;
   background: var(--white);
 }
 
@@ -1145,7 +1145,7 @@ noscript .counter {
 .testimonials,
 .about-author,
 .faq {
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
 
 /* ========== RESPONSIVE ========== */
