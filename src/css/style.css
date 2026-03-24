@@ -149,14 +149,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  color: var(--white);
-  border: 1.5px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.25);
+  background: var(--navy);
+  color: var(--white);
   transform: translateY(-2px);
 }
 
@@ -256,35 +256,21 @@ h1,h2,h3,h4,h5,h6 {
 
 /* ========== HERO — DARK NAVY WITH ANIMATED GRADIENT ========== */
 .hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-mid) 100%);
-  background-size: 300% 300%;
-  animation: gradientShift 8s ease infinite;
-  color: var(--white);
+  background: var(--white);
+  color: var(--text-dark);
   padding: 140px 0 100px;
   position: relative;
   overflow: hidden;
 }
 
-/* Animated gradient background */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Star pattern overlay */
+/* Subtle texture on white hero */
 .hero::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1) 1px, transparent 1px),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    radial-gradient(circle at 40% 70%, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 150px 150px, 200px 200px, 180px 180px, 220px 220px;
+  background-image: radial-gradient(circle at 50% 50%, rgba(11,29,58,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
   pointer-events: none;
-  opacity: 0.6;
 }
 
 /* Red accent line at bottom */
@@ -309,9 +295,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .coming-soon-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: var(--navy);
   color: var(--white);
   padding: 8px 20px;
   border-radius: var(--radius-pill);
@@ -330,15 +314,14 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
   line-height: 1.05;
   margin-bottom: 1.25rem;
-  color: var(--white);
-  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  color: var(--navy);
 }
 
 .hero-subtitle {
   font-family: var(--font-family);
   font-size: 2rem;
   font-weight: 300;
-  color: var(--star-gold);
+  color: var(--patriot-red);
   margin-bottom: 1.75rem;
   letter-spacing: 0.2px;
   line-height: 1.4;
@@ -350,7 +333,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
   margin-bottom: 2.5rem;
   line-height: 1.6;
-  color: rgba(255,255,255,0.95);
+  color: var(--text-mid);
 }
 
 .hero-cta-buttons {
@@ -379,12 +362,11 @@ h1,h2,h3,h4,h5,h6 {
   height: auto;
   max-height: 700px;
   transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
-  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.5));
-  transform: rotate(-2deg) scale(1.05);
+  filter: drop-shadow(0 12px 40px rgba(11,29,58,0.2));
 }
 
 .book-mockup-img:hover {
-  transform: scale(1.08) translateY(-6px) rotate(-2deg);
+  transform: scale(1.03) translateY(-4px);
 }
 
 /* ========== MEDIA BAR (REPLACING RETAILER) ========== */
